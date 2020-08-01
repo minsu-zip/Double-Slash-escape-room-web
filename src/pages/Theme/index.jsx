@@ -4,11 +4,15 @@ import React from "react";
 import ThemeHeader from "../../components/Common/ThemeHeader";
 import PostList from "../../components/Common/PostList";
 
+// test
+import ThemePopup from "../../components/FilterPopup";
+
 const Theme = () => {
   return (
     <>
       <ThemeHeader />
       <PostList />
+      <ThemePopup />
     </>
   );
 };
