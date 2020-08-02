@@ -3,13 +3,13 @@ import styled from 'styled-components';
 
 //전체 감쌈
 export const Container = styled.header `
-    display: absolute;
+    display: block;
     top: 0px
     position: fixed;
     padding: 5px 10px 5px 10px;
     margin: 0px;
     background-color:linen;
-`;
+`;//
 
 //서비스 이름
 export const Name = styled.div `
