@@ -7,7 +7,6 @@ import * as S from './style.js';
 const OffsetCardList = () => {
     const [showResults, setShowResults] = React.useState(false);
     const onClick = () => setShowResults(true);
-
     const Results = () => (
         <div id="results" className="search-results">
             <S.Row>
