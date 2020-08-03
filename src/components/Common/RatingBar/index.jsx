@@ -11,7 +11,12 @@ const RatingBar = ({ ratings }) => {
           .fill()
           .map((value, index) => {
             const starColor = index + 1 <= ratings;
-            return <S.Star style={starColor} />;
+            return (
+              <S.Star
+                key={index + Math.floor(Math.random() * 1000)}
+                style={starColor}
+              />
+            );
           })}
     </>
   );
