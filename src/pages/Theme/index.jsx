@@ -2,8 +2,8 @@ import React from "react";
 
 // components
 import ThemeHeader from "../../components/Common/ThemeHeader";
-import PostList from "../../components/Common/PostList";
-
+import SwipeCardList from "../../components/Common/SwipeCardList";
+import OffsetCardList from "../../components/Common/OffsetCardList";
 // test
 import ThemePopup from "../../components/FilterPopup";
 
@@ -11,7 +11,10 @@ const Theme = () => {
   return (
     <>
       <ThemeHeader />
-      <PostList />
+      <SwipeCardList />
+    
+      <OffsetCardList/>
+      
       <ThemePopup />
     </>
   );

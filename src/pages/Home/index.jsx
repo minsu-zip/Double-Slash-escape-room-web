@@ -3,7 +3,7 @@ import * as S from './style.js';
 import img from './16.jpg';
 
 // components
-import PostList from "../../components/Common/PostList";
+import SwipeCardList from "../../components/Common/SwipeCardList";
 
 const Home = () => {
   return (
@@ -20,7 +20,7 @@ const Home = () => {
         </S.TitleWrapper>
       </S.Container>
 
-      <PostList></PostList>
+      <SwipeCardList></SwipeCardList>
       
     </>
   );

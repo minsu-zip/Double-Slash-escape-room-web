@@ -2,13 +2,13 @@ import React from "react";
 
 // components
 import CafeTab from "../../components/CafeTab";
-import PostList from "../../components/Common/PostList";
+import SwipeCardList from "../../components/Common/SwipeCardList";
 
 const Cafe = () => {
   return (
     <>
       <CafeTab />
-      <PostList />
+      <SwipeCardList />
     </>
   );
 };
