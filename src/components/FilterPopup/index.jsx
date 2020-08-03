@@ -73,9 +73,11 @@ const FilterPopUp = () => {
           })}
         </S.AccordionWrapper>
         <S.SubmitButtonWrapper block={clickedList}>
-          <button>전송</button>
-          <div className="block">
-            <span>{filteringResult || "전송"}</span>
+          <div className="positioner">
+            <button>전송</button>
+            <div className="block">
+              <span>{filteringResult || "전송"}</span>
+            </div>
           </div>
         </S.SubmitButtonWrapper>
       </S.Form>

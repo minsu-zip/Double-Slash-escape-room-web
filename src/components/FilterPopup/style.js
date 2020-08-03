@@ -44,12 +44,20 @@ export const AccordionWrapper = styled.ul`
 export const SubmitButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
-  position: relative;
+  position: fixed;
+  bottom: 10%;
+  left: calc(50% - 75px);
+  width: 150px;
   height: 40px;
   button {
-    width: 20%;
+    width: 100%;
     height: 100%;
     cursor: pointer;
+  }
+  .positioner {
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
   .block {
     display: ${(props) => (props.block.length === 0 ? "inline-flex" : "none")};
@@ -59,8 +67,8 @@ export const SubmitButtonWrapper = styled.div`
     align-items: center;
     position: absolute;
     top: 0;
-    left: 40%;
-    width: 20%;
+    left: 0;
+    width: 100%;
     height: 100%;
   }
 `;
