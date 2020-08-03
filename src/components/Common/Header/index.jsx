@@ -1,6 +1,9 @@
 import React from "react";
+import {Route, Link} from 'react-router-dom';
 
 import * as S from './style.js'
+import Cafe from '../../../pages/Cafe/index.jsx'
+import Theme from '../../../pages/Theme/index.jsx'
 
 const Header = () => {
   return (
@@ -10,9 +13,9 @@ const Header = () => {
       <S.Name><a href='/'>방탈출</a></S.Name>
 
       <S.MenuWrapper>
-        <S.Menu><a href='/'>카페</a></S.Menu>
-        <S.Menu><a href='/'>테마</a></S.Menu>
-        <S.Menu><a href='/'>마이페이지</a></S.Menu>
+        <S.Menu><Link to='Cafe'>카페</Link></S.Menu>
+        <S.Menu><Link to='Theme'>테마</Link></S.Menu>
+        <S.Menu><Link to=''>마이페이지</Link></S.Menu>
       </S.MenuWrapper>
       
     </S.Container>
