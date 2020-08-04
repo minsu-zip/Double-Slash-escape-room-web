@@ -8,7 +8,7 @@ import 'swiper/swiper-bundle.css';
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
 
 const SwipeCardList = () => {
-  const slides = [<Post></Post>];
+  
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [ControlledSwiper, setControlledSwiper] = useState(null);
   const slides_s = [];
