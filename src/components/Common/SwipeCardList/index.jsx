@@ -9,24 +9,29 @@ import dummy from '../../../dummy/themes.json';
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
 
 const SwipeCardList = () => {
-  
+
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [ControlledSwiper, setControlledSwiper] = useState(null);
-  const slides_s = [];
 
-  const datadummy = {dummy};
+  // const slides_s = [];
+  // for (let i = 0; i < 10; i++) {
+  //   slides_s.push(
+  //     <SwiperSlide key={`slide-${i}`} tag="li">
+  //       <S.Img>{Post`style={listStyle: 'none'}`} <S.text><div>금주의 테마</div></S.text></S.Img>
 
-  // for (let i = 0; i< datadummy.length; i++){
-  //   datadummy[i].
+  //     </SwiperSlide>
+  //   )
   // }
 
-  for (let i = 0; i < 10; i++) {
-    slides_s.push(
-      <SwiperSlide key={`slide-${i}`} tag="li">
+  const datadummy = dummy;
+  const slide = datadummy.map((dummy, index) => {
+    return (
+      <SwiperSlide key={index} tag="li">
         <S.Img>{Post`style={listStyle: 'none'}`} <S.text><div>금주의 테마</div></S.text></S.Img>
       </SwiperSlide>
     )
-  }
+  })
+
 
   return (
     <>
@@ -43,7 +48,7 @@ const SwipeCardList = () => {
           onSlideChange={() => console.log('slide change')}
           onSwiper={setThumbsSwiper}
         >
-          {slides_s}
+          {slide}
         </Swiper>
 
       </S.Container>

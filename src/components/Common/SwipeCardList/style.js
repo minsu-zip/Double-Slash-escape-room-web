@@ -24,5 +24,6 @@ export const text = styled.div`
         top:10%;
         left:20%;
         text-align: center;
+        color: white;
     
 `
