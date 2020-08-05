@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Controller, Thumbs, } from 'swiper';
 import 'swiper/swiper-bundle.css';
 
+import dummy from '../../../dummy/themes.json';
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
 
 const SwipeCardList = () => {
@@ -13,10 +14,16 @@ const SwipeCardList = () => {
   const [ControlledSwiper, setControlledSwiper] = useState(null);
   const slides_s = [];
 
+  const datadummy = {dummy};
+
+  // for (let i = 0; i< datadummy.length; i++){
+  //   datadummy[i].
+  // }
+
   for (let i = 0; i < 10; i++) {
     slides_s.push(
       <SwiperSlide key={`slide-${i}`} tag="li">
-        {Post`style={listStyle: 'none'}`}
+        <S.Img>{Post`style={listStyle: 'none'}`} <S.text><div>금주의 테마</div></S.text></S.Img>
       </SwiperSlide>
     )
   }
@@ -25,7 +32,7 @@ const SwipeCardList = () => {
     <>
       <S.Container>
 
-        <S.text>BEST POPULAR</S.text>
+        <S.title>BEST POPULAR</S.title>
         {/* 멀티슬라이드 적용부분 */}
         <Swiper id="main" tag="section" wrapperTag="ul"
           navigation pagination={{ clickable: true }}

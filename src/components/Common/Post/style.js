@@ -7,5 +7,8 @@ export const Wrapper = styled.div`
     // background-color: silver;
     // align-items: center;
     // justify-content: center;
-
+   
+    height: 400px;
+    width: 300px;
+    
 `;

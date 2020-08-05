@@ -1,6 +1,5 @@
 import React from "react";
 import Post from '../Post';
-import a from '../SwipeCardList'
 import * as S from './style.js';
 
 
@@ -13,7 +12,7 @@ const OffsetCardList = () => {
         slides_s.push(
         <S.Column>
             <S.Item>
-                <S.Img><Post></Post><S.text><button>찜</button></S.text></S.Img>
+                <S.Img><Post></Post><S.text>찜</S.text></S.Img>
                 <div>설명추가</div>
             </S.Item>
         </S.Column>
@@ -23,7 +22,7 @@ const OffsetCardList = () => {
     const Results = () => (
         <div id="results" className="search-results">
             <S.Row>
-                {slides_s};
+                {slides_s}
             </S.Row>
         </div>
     )
@@ -32,9 +31,9 @@ const OffsetCardList = () => {
         <>
             <S.Container>
                 <S.Row>
-                    {slides_s};
+                    {slides_s}
                 </S.Row>
-
+                
                 {showResults ? <Results /> : null}
 
             </S.Container>
