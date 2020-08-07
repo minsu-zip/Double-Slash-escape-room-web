@@ -34,9 +34,10 @@ export const Text = styled.div`
 `
 
 export const Button = styled.button`
-    
+    button{
+        
+    }
     margin: 10px;
-    border-style: none;
     width: 140px;
     height: 45px;
     font-family: 'Roboto', sans-serif;
