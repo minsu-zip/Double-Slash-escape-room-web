@@ -22,30 +22,41 @@ export const TitleWrapper = styled.div`
     position: absolute;
     top: 40%;
     left: 50%;
+    
 `
 export const Text = styled.div`
+    h1{
+        font-size: 30px;
+    }
+    
     margin: 10px;
+    padding: 10px;
 `
 
 export const Button = styled.button`
+    
     margin: 10px;
+    border-style: none;
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+      
+    &:hover {
+        background-color: #2EE59D;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+    }
 `
-
-
-// .container {
-//     width: 100%;
-//     height: 100%;
-//     position: relative;
-//   }
-//   img{
-//     width: 100%;
-//   }
-//   .title {
-//       position: absolute;
-//       top: 40%;
-//       left: 50%;
-
-//   }
-//   .title-text, button{
-//     margin: 10px;
-//   }

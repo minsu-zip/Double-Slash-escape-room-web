@@ -13,7 +13,7 @@ const Home = () => {
         <S.ImgSize><img src={img} alt="z" /></S.ImgSize>
 
         <S.TitleWrapper>
-          <S.Text>xx방탈출</S.Text>
+          <S.Text><h1>xx방탈출</h1></S.Text>
           <S.Text>토론을 시작하거나, 메모를 작성하거나, 아트보드에 주석을 달려면 댓글을 남겨 주십시오.</S.Text>
           <S.Button>테마검색</S.Button>
           <S.Button>테마검색</S.Button>

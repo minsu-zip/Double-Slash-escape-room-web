@@ -24,7 +24,7 @@ const OffsetCardList = () => {
         return (
             <S.Column ket={index}>
                 <S.Item>
-                    <S.Img><Post></Post><S.text>찜</S.text></S.Img>
+                    <S.Img><Post></Post><S.text><button onClick>찜</button></S.text></S.Img>
                     <div>설명추가</div>
                 </S.Item>
             </S.Column>
