@@ -33,6 +33,7 @@ const App = () => {
             <Route path="/" exact component={Home} />
             <Route path="/cafe" exact component={Cafe} />
             <Route path="/cafe/:id" exact component={CafeDetail} />
+            <Route path="/cafe/:id/:info" component={CafeDetail} />
             <Route path="/theme" exact component={Theme} />
             <Route path="/theme/result" exact component={ThemeResult} />
             <Route path="/theme/:id" exact component={ThemeDetail} />
