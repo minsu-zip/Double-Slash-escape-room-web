@@ -13,7 +13,7 @@ const RatingBar = ({ ratings }) => {
             const starColor = index + 1 <= ratings;
             return (
               <S.Star
-                key={index + Math.floor(Math.random() * 1000)}
+                key={index + Math.floor(Math.random() * 10000)}
                 style={starColor}
               />
             );
