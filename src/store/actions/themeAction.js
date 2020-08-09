@@ -1,3 +1,3 @@
-export const LOAD_THEME_REQUEST = "LOAD_THEME_REQUEST";
-export const LOAD_THEME_SUCCESS = "LOAD_THEME_SUCCESS";
-export const LOAD_THEME_FAILURE = "LOAD_THEME_FAILURE";
+// 필터링 버튼 클릭
+export const CLICK_FILTER_BUTTON = "CLICK_FILTER_BUTTON";
+export const filterPopupStatus = () => ({ type: CLICK_FILTER_BUTTON });

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { BsX } from "react-icons/bs";
 
 // action
+import { filterPopupStatus } from "../../store/actions/themeAction";
 import { SUBMIT_FILTERING_REQUEST } from "../../store/actions/filterAction";
 
 // component
@@ -26,19 +27,24 @@ const dummy = [
 const FilterPopUp = () => {
   const dispatch = useDispatch();
   let history = useHistory();
+
+  // 필터링 팝업창 출력 상태
+  const status = useSelector((state) => state.theme.filterPopupStatus);
+  // 클릭한 체크박스 리스트
   const clickedList = useSelector((state) => state.filterReducer.clickedList);
+  //
   const filteringResult = useSelector(
     (state) => state.filterReducer.filteringResult
   );
+  // 필터링 성공여부 판단
   const filteringSuccess = useSelector(
     (state) => state.filterReducer.filteringSuccess
   );
-  const popupRef = useRef(); // 팝업창 ref
 
   // 닫기 버튼 클릭 시 팝업창 사라짐
   const hideFilterPopup = useCallback(() => {
-    popupRef.current.classList.add("hide");
-  }, []);
+    dispatch(filterPopupStatus());
+  }, [dispatch]);
 
   // 전송 버튼 클릭 시 체크했던 필터링 전송
   const submitFiltering = useCallback(
@@ -59,28 +65,32 @@ const FilterPopUp = () => {
 
   return (
     <>
-      <S.Form ref={popupRef} onSubmit={submitFiltering}>
-        <S.PopupHeader>
-          <h2>테마별 검색</h2>
-          <div>
-            <BsX onClick={hideFilterPopup} />
-          </div>
-        </S.PopupHeader>
-        <S.AccordionWrapper>
-          {dummy.map((value) => {
-            const { name, buttons } = value;
-            return <FilterAccordion key={name} name={name} buttons={buttons} />;
-          })}
-        </S.AccordionWrapper>
-        <S.SubmitButtonWrapper block={clickedList}>
-          <div className="positioner">
-            <button>전송</button>
-            <div className="block">
-              <span>{filteringResult || "전송"}</span>
+      {status && (
+        <S.Form onSubmit={submitFiltering}>
+          <S.PopupHeader>
+            <h2>테마별 검색</h2>
+            <div>
+              <BsX onClick={hideFilterPopup} />
             </div>
-          </div>
-        </S.SubmitButtonWrapper>
-      </S.Form>
+          </S.PopupHeader>
+          <S.AccordionWrapper>
+            {dummy.map((value) => {
+              const { name, buttons } = value;
+              return (
+                <FilterAccordion key={name} name={name} buttons={buttons} />
+              );
+            })}
+          </S.AccordionWrapper>
+          <S.SubmitButtonWrapper block={clickedList}>
+            <div className="positioner">
+              <button>전송</button>
+              <div className="block">
+                <span>{filteringResult || "전송"}</span>
+              </div>
+            </div>
+          </S.SubmitButtonWrapper>
+        </S.Form>
+      )}
     </>
   );
 };
