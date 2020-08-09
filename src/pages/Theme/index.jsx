@@ -12,9 +12,9 @@ const Theme = () => {
     <>
       <ThemeHeader />
       <SwipeCardList />
-    
-      <OffsetCardList/>
-      
+
+      <OffsetCardList />
+
       <ThemePopup />
     </>
   );

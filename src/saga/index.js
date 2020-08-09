@@ -1,8 +1,9 @@
 import { all, call } from "redux-saga/effects";
 
+import cafe from "./cafe.saga";
 import filter from "./filter.saga";
-import theme from "./theme.saga";
+import themeDetail from "./themeDetail.saga";
 
 export default function* () {
-  yield all([call(filter), call(theme)]);
+  yield all([call(cafe), call(filter), call(themeDetail)]);
 }
