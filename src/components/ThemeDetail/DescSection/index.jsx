@@ -7,7 +7,7 @@ import * as S from "./style";
 import GridItem from "./GridItem";
 
 const DescSection = () => {
-  const theme = useSelector((state) => state.theme.theme);
+  const theme = useSelector((state) => state.themeDetail.theme);
 
   return (
     <>

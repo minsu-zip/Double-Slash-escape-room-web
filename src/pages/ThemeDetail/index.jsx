@@ -7,7 +7,7 @@ import DescSection from "../../components/ThemeDetail/DescSection";
 import ReviewSection from "../../components/ThemeDetail/ReviewSection";
 
 // action
-import { LOAD_THEME_REQUEST } from "../../store/actions/themeAction";
+import { LOAD_THEME_REQUEST } from "../../store/actions/themeDetailAction";
 
 // style
 import * as S from "./style";

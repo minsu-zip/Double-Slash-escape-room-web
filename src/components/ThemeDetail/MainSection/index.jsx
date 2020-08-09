@@ -9,7 +9,7 @@ import RatingBar from "../../Common/RatingBar";
 import * as S from "./style";
 
 const MainSection = () => {
-  const theme = useSelector((state) => state.theme.theme);
+  const theme = useSelector((state) => state.themeDetail.theme);
 
   return (
     <>

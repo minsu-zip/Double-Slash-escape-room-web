@@ -9,7 +9,7 @@ import Review from "../../Common/Review";
 import * as S from "./style";
 
 const ReviewSection = () => {
-  const theme = useSelector((state) => state.theme.theme);
+  const theme = useSelector((state) => state.themeDetail.theme);
 
   return (
     <>
