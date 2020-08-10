@@ -3,23 +3,21 @@ import styled from 'styled-components';
 
 export const Container = styled.header `
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     padding:20px 25px;
-    margin:10px 30px;
+    margin:50px 30px 10px 30px;
     
     font-size: 20px;
-    border-style: solid;
-    border-width: 0px 0px 0.5px 0px;
-    border-color: gray;
 `;
 
 export const Span = styled.span`
     display: inline-flex;
     font-size: 30px;
-    font-weight: 900;
-    letter-spacing: 10px;
+    font-weight: 900; 
+    color:#6E6E6E;
+    margin-left: 5px;
 `;
 
 export const Input = styled.form `
@@ -27,41 +25,60 @@ export const Input = styled.form `
     justify-content: space-between;
 
     padding:0px 10px;
-    background-color: royalBlue;
+    margin-left: 50px;
+
+    background-color:#FAFAFA;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color:#BDBDBD;
+    border-radius: 45px / 45px;
+
     input {
         display: inline-flex;
         justify-content: space-between;
         border:0px;
+        background-color:#FAFAFA;
         margin:5px 20px;
     }
     .search{
         font-size: 20px;
-        width: 400px;
+        width: 700px;
         height: 40px;
     }
-    .submit{
-        justify-content: center;
-        align-items: center;
-        background-color: skyblue;
-        cursor: pointer;
+    .search::placeholder{
+        color:#A4A4A4;
+    }
+    .search:focus{
+        outline:none;
+    }
+`;
 
-        width: 50px;
-        height: 40px;
-    }
+export const Magni = styled.div `
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 25px;
+
+    width: 50px;
+    height: 40px;
+    margin: 5px;
 `;
 
 export const Filter = styled.div `
     display: inline-flex;
-    justify-content: space-between;
-    svg{cursor:pointer;}
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
-    width: 50px;
-    height: 40px;
+    cursor:pointer;
+    font-size: 22px;
+    color: #E6E6E6;
+    background-color: #585858;
+    border-radius: 45px / 45px;
 
-    margin:0px 0px 0px 50px;
-    padding:5px 10px;
-    background-color: skyblue;
+    width: 180px;
+    height: 50px;
+    margin-right:10px;
+    padding:5px 20px;
 `;
 
