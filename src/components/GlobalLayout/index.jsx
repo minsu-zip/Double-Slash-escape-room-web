@@ -4,14 +4,17 @@ import React from "react";
 import Header from "../Common/Header";
 import Footer from "../Common/Footer";
 
+// style
+import * as S from "./style";
+
 const GlobalLayout = ({ children }) => {
   return (
     <>
-      <div>
+      <S.Layout>
         <Header />
         {children}
         <Footer />
-      </div>
+      </S.Layout>
     </>
   );
 };
