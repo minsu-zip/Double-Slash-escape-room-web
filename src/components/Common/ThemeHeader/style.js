@@ -63,6 +63,10 @@ export const Magni = styled.div `
     width: 50px;
     height: 40px;
     margin: 5px;
+    img{
+        width: 35px;
+        height: 35px;
+    }
 `;
 
 export const Filter = styled.div `
@@ -80,5 +84,9 @@ export const Filter = styled.div `
     height: 50px;
     margin-right:10px;
     padding:5px 20px;
+    img{
+        width: 35px;
+        height: 35px;
+    }
 `;
 

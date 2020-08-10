@@ -1,9 +1,9 @@
 import React, { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { Router, Link } from "react-router-dom";
-import { RiEqualizerLine } from "react-icons/ri";
-import { BsSearch } from "react-icons/bs";
 
+import Magnifier from "./그래픽_검색.png"
+import FilterIcon from "./그래픽_필터.png"
 import * as S from "./style.js";
 
 // action
@@ -29,12 +29,14 @@ const ThemeHeader = () => {
               placeholder="search"
               class="search"
             ></input>
-            <S.Magni><BsSearch /></S.Magni>
+            <S.Magni>
+              <img src={Magnifier} /> 
+            </S.Magni>
           </S.Input>
         </form>
 
         <S.Filter onClick={clickFilterBtn}>
-          <div>filter</div> <RiEqualizerLine />
+          <div>filter</div> <img src={FilterIcon} />
         </S.Filter>
       </S.Container>
     </>
