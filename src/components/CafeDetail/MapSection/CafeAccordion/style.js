@@ -29,8 +29,14 @@ export const ImfoContainer = styled.div`
     margin-bottom: 1rem;
     font-weight: bold;
   }
-  .location {
-    margin: 0.5rem 0 0.5rem 0;
+  .address,
+  .phone {
+    span {
+      margin-left: 0.5rem;
+    }
+  }
+  .address {
+    margin-bottom: 0.5rem;
   }
 `;
 

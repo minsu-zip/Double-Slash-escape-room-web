@@ -5,7 +5,7 @@ export const Layout = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 20%;
+  height: 25vh;
 `;
 
 export const Tab = styled.div`

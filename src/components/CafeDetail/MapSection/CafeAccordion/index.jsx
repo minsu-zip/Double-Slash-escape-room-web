@@ -1,4 +1,6 @@
 import React from "react";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { GiPhone } from "react-icons/gi";
 
 // component
 import RatingBar from "../../../Common/RatingBar";
@@ -7,20 +9,26 @@ import RatingBar from "../../../Common/RatingBar";
 import * as S from "./style";
 
 const CafeAccordion = ({ data }) => {
-  console.log(data);
   return (
     <>
       <S.Layout>
         <S.ImageWrapper>
-          <img src={data.thumbnail} />
+          <img src={`http://220.149.235.230/${data.logo}`} />
         </S.ImageWrapper>
         <S.ImfoContainer>
-          <h2>{data.cafe}</h2>
+          <h2>{data.cafeName}</h2>
           <S.RatingBarWrapper>
-            <RatingBar ratings={data.ratings} />
+            <RatingBar ratings={data.rating} />
+            <span>{data.review || 0}개의 평가</span>
           </S.RatingBarWrapper>
-          <div className="addreslocations">{data.location}</div>
-          <div className="phone">{data.phone}</div>
+          <div className="address">
+            <FaMapMarkerAlt />
+            <span>{data.address}</span>
+          </div>
+          <div className="phone">
+            <GiPhone />
+            <span>{data.phoneNum}</span>
+          </div>
         </S.ImfoContainer>
       </S.Layout>
     </>

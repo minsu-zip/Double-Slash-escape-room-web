@@ -19,10 +19,10 @@ const MapSection = () => {
     kakao.maps.load(() => {
       let element = document.getElementById("map");
       const map = new kakao.maps.Map(element, {
-        center: new kakao.maps.LatLng(longitude, latitude),
+        center: new kakao.maps.LatLng(latitude, longitude),
         draggable: false,
       });
-      const markerPosition = new kakao.maps.LatLng(longitude, latitude);
+      const markerPosition = new kakao.maps.LatLng(latitude, longitude);
       const marker = new kakao.maps.Marker({
         position: markerPosition,
       });

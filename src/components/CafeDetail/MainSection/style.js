@@ -6,7 +6,7 @@ export const Layout = styled.section`
   align-items: flex-end;
   position: relative;
   width: 100%;
-  height: 80%;
+  height: calc(75vh - 56px);
   padding-bottom: 4rem;
 `;
 
@@ -16,10 +16,15 @@ export const InfoContainer = styled.div`
   h2 {
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
+    color: white;
     font-weight: bold;
   }
-  span {
-    color: gray;
+  span,
+  svg {
+    color: white;
+  }
+  svg {
+    margin-right: 1rem;
   }
   .phone {
     margin-bottom: 1rem;
@@ -30,17 +35,13 @@ export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  button {
-    width: 40px;
-    height: 40px;
-    outline: 0;
-    border: 0.5px solid black;
-    font-size: 0.7rem;
-    background: white;
+  svg {
+    color: white;
   }
   .link {
     display: flex;
     align-items: center;
+    margin-top: 1rem;
     button {
       margin-top: 0.5rem;
     }

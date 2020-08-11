@@ -20,7 +20,7 @@ const CafeAccordionLayout = ({ data }) => {
     <>
       <S.Layout>
         <S.TitleContainer>
-          <h2>{data.cafe}</h2>
+          <h2>{data.cafeName}</h2>
           <S.ButtonBoreder onClick={openAcoordionBtn}>
             {openBtn ? <BsChevronDown /> : <BsChevronCompactUp />}
           </S.ButtonBoreder>

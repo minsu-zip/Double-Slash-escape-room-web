@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Layout = styled.div`
   position: absolute;
-  bottom: -50px;
+  bottom: 0px;
   left: 0;
   right: 0;
   width: 80%;
