@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainSection = styled.section`
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 56px);
 `;
 
 export const Article = styled.article`
@@ -19,8 +19,11 @@ export const Background = styled.div`
   left: -8rem;
   width: calc(100% + 16rem);
   height: 100%;
-  background: red;
   z-index: -1;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const InfoContainer = styled.div`
@@ -49,22 +52,15 @@ export const Description = styled.div`
 export const Buttons = styled.div`
   display: flex;
   color: white;
-  .button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+  img {
     width: 35px;
     height: 35px;
-    background: white;
-    color: gray;
-    cursor: pointer;
   }
-  .url {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 110px;
-    margin-left: 4rem;
+  .heart {
+    margin-right: 1.5rem;
+  }
+  .right-arrow {
+    margin-left: 1rem;
   }
 `;
 

@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 // components
 import MainSection from "../../components/ThemeDetail/MainSection";
 import DescSection from "../../components/ThemeDetail/DescSection";
 import ReviewSection from "../../components/ThemeDetail/ReviewSection";
+import Fallback from "../../components/ThemeDetail/ThemeDetailFallback";
 
 // action
 import { LOAD_THEME_REQUEST } from "../../store/actions/themeDetailAction";
@@ -14,25 +15,32 @@ import * as S from "./style";
 
 const ThemeDetail = ({ match }) => {
   const dispatch = useDispatch();
+  const theme = useSelector((state) => state.themeDetail.theme);
 
   useEffect(() => {
-    const { params } = match;
+    const {
+      params: { id },
+    } = match;
     dispatch({
       type: LOAD_THEME_REQUEST,
       data: {
-        params,
+        id,
       },
     });
   }, [dispatch, match]);
 
   return (
     <>
-      <S.Layout>
-        <MainSection />
-        <DescSection />
-        <ReviewSection />
-        <section></section>
-      </S.Layout>
+      {theme ? (
+        <S.Layout>
+          <MainSection />
+          <DescSection />
+          <ReviewSection />
+          <section></section>
+        </S.Layout>
+      ) : (
+        <Fallback />
+      )}
     </>
   );
 };

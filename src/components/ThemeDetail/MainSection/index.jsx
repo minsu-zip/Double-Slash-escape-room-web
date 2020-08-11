@@ -1,5 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { BsHeart } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 
 // components
 import TabMenu from "../TabMenu";
@@ -17,27 +19,33 @@ const MainSection = () => {
         <S.MainSection>
           <S.Article>
             <S.Background>
-              <img />
+              <img
+                alt="배경화면"
+                src={`http://220.149.235.230/${theme.image}`}
+              />
             </S.Background>
             <S.InfoContainer>
               <S.Description>
-                <h3>{theme.cafe}</h3>
-                <h2>{theme.room}</h2>
+                <h3>{theme.cafeName}</h3>
+                <h2>{theme.themeName}</h2>
                 <div className="rating">
-                  <RatingBar ratings={theme.ratings} />
-                  <div>{`${theme.review_count}개의 리뷰`}</div>
+                  <RatingBar ratings={theme.rating} />
+                  <div>{`${theme.review.length}개의 리뷰`}</div>
                 </div>
               </S.Description>
               <S.Buttons>
-                <div className="button">찜</div>
+                <BsHeart className="heart" />
                 <div className="url">
                   <span>카페정보</span>
-                  <span className="button">이동</span>
+                  <BsArrowRight className="right-arrow" />
                 </div>
               </S.Buttons>
             </S.InfoContainer>
             <S.Thumbnail>
-              <img src={theme.thumbnail} />
+              <img
+                alt="배경화면"
+                src={`http://220.149.235.230/${theme.image}`}
+              />
             </S.Thumbnail>
           </S.Article>
           <TabMenu />

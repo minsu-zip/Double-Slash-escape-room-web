@@ -34,5 +34,4 @@ export const Grid = styled.div`
   width: calc(100% + 16rem);
   height: 150px;
   padding-top: 1rem;
-  background: blue;
 `;

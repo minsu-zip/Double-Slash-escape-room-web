@@ -18,7 +18,7 @@ const ReviewSection = () => {
           <S.Layout>
             <h3 className="room">{theme.room}</h3>
             <h2 className="review">리뷰</h2>
-            {theme.reviews.map((comment) => {
+            {theme.review.map((comment) => {
               return (
                 <Review
                   key={comment.name + Math.floor(Math.random() * 1000)}
