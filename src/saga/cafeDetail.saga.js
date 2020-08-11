@@ -1,7 +1,5 @@
-import { all, call, delay, fork, put, takeLatest } from "redux-saga/effects";
-
-// dummy
-import cafeDummy from "../dummy/cafe.json";
+import { all, call, fork, put, takeLatest } from "redux-saga/effects";
+import axios from "axios";
 
 import {
   LOAD_CAFE_DETAIL_REQUEST,
@@ -10,18 +8,15 @@ import {
 } from "../store/actions/cafeDetailAction";
 
 function loadCafeApi(data) {
-  // return axios("/", )
-  return "";
+  return axios.get(`/cafe/${data.id}`);
 }
 
 function* loadCafe(action) {
   try {
-    //   const result = yield call(loadThemeApi, action.data)
-    yield delay(2000);
-    const result = cafeDummy;
+    const result = yield call(loadCafeApi, action.data);
     yield put({
       type: LOAD_CAFE_DETAIL_SUCCESS,
-      data: result,
+      data: result.data,
     });
   } catch (error) {
     yield put({

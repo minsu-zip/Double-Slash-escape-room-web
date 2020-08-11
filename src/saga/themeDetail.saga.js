@@ -1,7 +1,5 @@
 import { all, call, delay, fork, put, takeLatest } from "redux-saga/effects";
-
-// dummy
-import themeDummy from "../dummy/theme.json";
+import axios from "axios";
 
 import {
   LOAD_THEME_REQUEST,
@@ -10,18 +8,15 @@ import {
 } from "../store/actions/themeDetailAction";
 
 function loadThemeApi(data) {
-  // return axios("/", )
-  return "";
+  return axios.get(`/theme/${parseInt(data.id)}`);
 }
 
 function* loadTheme(action) {
   try {
-    //   const result = yield call(loadThemeApi, action.data)
-    yield delay(2000);
-    const result = themeDummy;
+    const result = yield call(loadThemeApi, action.data);
     yield put({
       type: LOAD_THEME_SUCCESS,
-      data: result,
+      data: result.data,
     });
   } catch (error) {
     yield put({
