@@ -1,8 +1,9 @@
 import React, { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { Router, Link } from "react-router-dom";
-import { FaFilter } from "react-icons/fa";
 
+import { RiEqualizerLine } from "react-icons/ri";
+import { BsSearch } from "react-icons/bs";
 import * as S from "./style.js";
 
 // action
@@ -19,21 +20,23 @@ const ThemeHeader = () => {
   return (
     <>
       <S.Container>
-        <S.Span>테마검색</S.Span>
+        <S.Span>테마</S.Span>
 
         <form>
           <S.Input>
             <input
               type="text"
-              placeholder="이름으로 테마 검색"
+              placeholder="search"
               class="search"
             ></input>
-            <input type="submit" value="검색" class="submit"></input>
+            <S.Magni>
+              <BsSearch /> 
+            </S.Magni>
           </S.Input>
         </form>
 
         <S.Filter onClick={clickFilterBtn}>
-          <FaFilter />
+          <div>filter</div> <RiEqualizerLine />
         </S.Filter>
       </S.Container>
     </>

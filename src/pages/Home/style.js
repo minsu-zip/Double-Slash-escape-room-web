@@ -28,20 +28,19 @@ export const Text = styled.div`
     h1{
         font-size: 30px;
     }
-    
     margin: 10px;
     padding: 10px;
+    font-family:'Arial Black', sans-serif;
+    color:white;
 `
-
 export const Button = styled.button`
-    button{
-        
-    }
+    
     margin: 10px;
     width: 140px;
-    height: 45px;
+    height: 40px;
     font-family: 'Roboto', sans-serif;
-    font-size: 11px;
+    font-weight: bolder;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;

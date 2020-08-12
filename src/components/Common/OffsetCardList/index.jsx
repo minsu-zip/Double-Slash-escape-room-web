@@ -7,18 +7,6 @@ const OffsetCardList = () => {
     const [showResults, setShowResults] = React.useState(false);
     const onClick = () => setShowResults(true);
     
-    // const slides_s = [];
-    // for (let i = 0; i < 4; i++) {
-    //     slides_s.push(
-    //         <S.Column>
-    //             <S.Item>
-    //                 <S.Img><Post></Post><S.text>찜</S.text></S.Img>
-    //                 <div>설명추가</div>
-    //             </S.Item>
-    //         </S.Column>
-    //     )
-    // }
-
     const datadummy = dummy;
     const slides = datadummy.map((dummy, index) => {
         return (

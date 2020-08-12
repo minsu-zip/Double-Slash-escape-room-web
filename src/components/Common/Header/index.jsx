@@ -10,12 +10,11 @@ const Header = () => {
     <>
     <S.Container>
       
-      <S.Name><a href='/'>방탈출</a></S.Name>
+      <S.Name><a href='/'>ROOM ESCAPE</a></S.Name>
 
       <S.MenuWrapper>
         <S.Menu><Link to='Cafe'>카페</Link></S.Menu>
         <S.Menu><Link to='Theme'>테마</Link></S.Menu>
-        <S.Menu><Link to=''>마이페이지</Link></S.Menu>
       </S.MenuWrapper>
       
     </S.Container>
