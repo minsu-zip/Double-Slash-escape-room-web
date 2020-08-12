@@ -2,13 +2,13 @@ import { combineReducers } from "redux";
 
 // reducers
 import cafeDetail from "./reducers/cafeDetailReducer";
-import filterReducer from "./reducers/filterReducer";
-import theme from "./reducers/themeReducer";
+import filter from "./reducers/filterReducer";
 import themeDetail from "./reducers/themeDetailReducer";
+import themes from "./reducers/themesReducer";
 
 export default combineReducers({
   cafeDetail,
-  filterReducer,
-  theme,
+  filter,
   themeDetail,
+  themes,
 });
