@@ -29,16 +29,14 @@ const FilterPopUp = () => {
   let history = useHistory();
 
   // 필터링 팝업창 출력 상태
-  const status = useSelector((state) => state.theme.filterPopupStatus);
+  const status = useSelector((state) => state.filter.printFilterPopup);
   // 클릭한 체크박스 리스트
-  const clickedList = useSelector((state) => state.filterReducer.clickedList);
+  const clickedList = useSelector((state) => state.filter.clickedList);
   //
-  const filteringResult = useSelector(
-    (state) => state.filterReducer.filteringResult
-  );
+  const filteringResult = useSelector((state) => state.filter.filteringResult);
   // 필터링 성공여부 판단
   const filteringSuccess = useSelector(
-    (state) => state.filterReducer.filteringSuccess
+    (state) => state.filter.filteringSuccess
   );
 
   // 닫기 버튼 클릭 시 팝업창 사라짐

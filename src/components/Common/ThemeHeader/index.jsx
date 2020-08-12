@@ -7,14 +7,14 @@ import { BsSearch } from "react-icons/bs";
 import * as S from "./style.js";
 
 // action
-import { filterPopupStatus } from "../../../store/actions/themeAction";
+import { printFilterPopup } from "../../../store/actions/filterAction";
 
 const ThemeHeader = () => {
   const dispatch = useDispatch();
 
   // 필터링 버튼 클릭
   const clickFilterBtn = useCallback(() => {
-    dispatch(filterPopupStatus());
+    dispatch(printFilterPopup());
   }, [dispatch]);
 
   return (
@@ -24,13 +24,9 @@ const ThemeHeader = () => {
 
         <form>
           <S.Input>
-            <input
-              type="text"
-              placeholder="search"
-              class="search"
-            ></input>
+            <input type="text" placeholder="search" class="search"></input>
             <S.Magni>
-              <BsSearch /> 
+              <BsSearch />
             </S.Magni>
           </S.Input>
         </form>
