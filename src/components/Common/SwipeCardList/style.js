@@ -7,9 +7,12 @@ export const Container = styled.div`
 `
 export const title = styled.h1`
     padding: 10px;
-    margin: 10px;
+    margin: 20px;
     font-weight: bold;
     text-align: center;
+    font-size:20px;
+    font-family:'Arial Black', sans-serif;
+
 `
 export const Img = styled.div`
     position: relative;
