@@ -13,9 +13,12 @@ import loadThemesSuccess from "./loadThemesSuccess";
 const initialState = {
   top10Themes: [], // 인기 테마 10개
   theOthersTheme: [], // 그외 테마들
+  
 };
 
 const ThemesReducer = (state = initialState, action) => {
+
+
   return immer(state, (draft) => {
     switch (action.type) {
       case LOAD_THEMES_REQUEST: {
