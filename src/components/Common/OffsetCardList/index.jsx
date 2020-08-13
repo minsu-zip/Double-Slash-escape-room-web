@@ -6,10 +6,9 @@ import dummy from '../../../dummy/themes.json';
 import { useSelector, useActions } from 'react-redux';
 const OffsetCardList = () => {
     const [showResults, setShowResults] = React.useState(false);
-    const onClick = () => setShowResults(true);
+    const [showButtons, setShowButtons] = React.useState(true);
 
     const theOthersTheme = useSelector((state) => state.themes.theOthersTheme);
-    console.log(theOthersTheme)
 
     const imgsilde = theOthersTheme.map((other) => {
         return (
@@ -26,27 +25,28 @@ const OffsetCardList = () => {
         )
     })
 
+    const mainimg = imgsilde.slice(0, 8);
+    const otherimg = imgsilde.slice(8);
 
-    const Results = () => (
-        <div id="results" className="search-results">
-            <S.Row>
-                {imgsilde}
-            </S.Row>
-        </div>
-    )
+    const onClick = () => {
+        setShowResults(true);
+        setShowButtons(false);
+    }
 
     return (
         <>
             <S.Container>
                 <S.Row>
-                    {imgsilde}
+                    {mainimg}
                 </S.Row>
 
-                {showResults ? <Results /> : null}
+                {showResults ? <S.Row>{otherimg}</S.Row> : null}
 
             </S.Container>
 
-            <S.More> <button onClick={onClick}>more</button></S.More>
+            {showButtons ? <S.More> <button onClick={onClick} >more</button></S.More> : null}
+
+
         </>
     )
 }

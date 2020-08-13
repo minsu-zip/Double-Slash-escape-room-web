@@ -8,6 +8,8 @@ export const Container = styled.div`
     margin: 10px;
     paading-top:50px;
     margin-top:50px;
+    
+    // position: relative;
 
     
 `;
@@ -74,17 +76,20 @@ export const Item = styled.div`
 `;
 
 export const More = styled.div`
-	margin-left: 370px;
-    padding-left: 370px;
 
+    margin-left: 23%;
+    padding-left: 23%;
+  
     button{
+    height: 40px;
+    width: 100px;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #000;
-    background-color: #fff;
+    
+    color: #fff;
+    background-color: gray;
     border: none;
     border-radius: 45px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
