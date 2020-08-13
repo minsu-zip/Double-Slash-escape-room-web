@@ -17,7 +17,6 @@ export const AccordionWrapper = styled.div`
     align-items: center;
     width: 40px;
     height: 40px;
-    background: pink;
     svg {
       cursor: pointer;
     }

@@ -9,6 +9,7 @@ export const Form = styled.form`
   width: 100vw;
   height: 100vh;
   padding: 2rem;
+  overflow: scroll;
   z-index: 10;
   background: white;
   &.hide {
@@ -30,7 +31,6 @@ export const PopupHeader = styled.header`
     align-items: center;
     width: 40px;
     height: 40px;
-    background: pink;
     svg {
       cursor: pointer;
     }
@@ -52,6 +52,11 @@ export const SubmitButtonWrapper = styled.div`
   button {
     width: 100%;
     height: 100%;
+    border-radius: 20px;
+    background: #585858;
+    color: white;
+    border: 0;
+    outline: 0;
     cursor: pointer;
   }
   .positioner {

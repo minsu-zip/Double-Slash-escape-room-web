@@ -8,8 +8,9 @@ import FilterButton from "../FilterButton";
 // style
 import * as S from "./style";
 
-const FilterAccordion = ({ name, buttons }) => {
+const FilterAccordion = ({ name, buttons, category }) => {
   const [hide, setHide] = useState(false);
+
   const clickShowButton = useCallback(() => {
     setHide((prev) => !prev);
   }, []);
@@ -30,7 +31,7 @@ const FilterAccordion = ({ name, buttons }) => {
         {hide && (
           <S.ButtonsWrapper>
             {buttons.map((button) => (
-              <FilterButton key={button} name={button} />
+              <FilterButton key={button} name={button} category={category} />
             ))}
           </S.ButtonsWrapper>
         )}

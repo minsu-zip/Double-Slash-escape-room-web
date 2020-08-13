@@ -2,25 +2,29 @@
 import React, { memo, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-// actioon
-import { CLICK_FILTER_CHECK_BOX } from "../../../store/actions/filterAction";
+// action
+import { clickFilterCheckBox } from "../../../store/actions/filterAction";
+import { genre } from "../../../store/reducers/filterReducer/clickFilterCheckBox";
 
 import * as S from "./style";
 
-const FilterButton = ({ name }) => {
+const FilterButton = ({ name, category }) => {
   const dispatch = useDispatch();
-  const clicked = useSelector((state) => state.filterReducer.clickedList);
+  const list = useSelector((state) => state.filter.clickedList);
+  const clicked =
+    category === "genre"
+      ? list[category] === genre[name]
+      : list[category] === name;
+
+  // 체크박스 클릭
   const clickButton = useCallback((event) => {
     event.preventDefault();
-    dispatch({
-      type: CLICK_FILTER_CHECK_BOX,
-      data: name,
-    });
+    dispatch(clickFilterCheckBox(category, name));
   }, []);
 
   return (
     <>
-      <S.Button clicked={clicked.includes(name)} onClick={clickButton}>
+      <S.Button onClick={clickButton} clicked={clicked}>
         {name}
       </S.Button>
     </>
