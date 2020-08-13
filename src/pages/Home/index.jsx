@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import { useDispatch } from "react-redux";
 
 import img from './main.png';
-import SwipeCardList from "../../components/Common/SwipeCardList";
+import ThemeCardList from "../../components/Common/ThemeCardList";
 
 
 
@@ -32,7 +32,7 @@ const Home = () => {
       </S.Container>
 
       
-      <S.Div><SwipeCardList></SwipeCardList></S.Div>
+      <S.Div><ThemeCardList></ThemeCardList></S.Div>
       
       
     </>

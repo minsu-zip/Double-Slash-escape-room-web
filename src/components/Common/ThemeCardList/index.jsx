@@ -7,7 +7,7 @@ import { useSelector, useActions  } from 'react-redux';
 
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
 
-const SwipeCardList = () => {
+const ThemeCardList = () => {
 
    const top10Themes = useSelector((state) => state.themes.top10Themes);
    const imgsilde = top10Themes.map((top,index)=>{
@@ -15,7 +15,7 @@ const SwipeCardList = () => {
       <SwiperSlide key={index} tag="li">
           <S.Img><img key={index} src={"http://220.149.235.230/"+top.image} ></img><S.text><div>{top.themeName}</div><div>{top.cafeName+":   "+top.area}</div> </S.text></S.Img>
           
-         {/* <S.Img>{Post`style={listStyle: 'none'}`} <S.text><div>금주의 테마</div></S.text></S.Img> */}
+
       </SwiperSlide>
      
     )
@@ -50,4 +50,4 @@ const SwipeCardList = () => {
   );
 };
 
-export default SwipeCardList;
+export default ThemeCardList;

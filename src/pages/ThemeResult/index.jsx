@@ -2,13 +2,13 @@ import React from "react";
 
 // components
 import ThemeHeader from "../../components/Common/ThemeHeader";
-import SwipeCardList from "../../components/Common/SwipeCardList";
+import ThemeCardList from "../../components/Common/ThemeCardList";
 
 const ThemeResult = () => {
   return (
     <>
       <ThemeHeader />
-      <SwipeCardList />
+      <ThemeCardList/>
     </>
   );
 };

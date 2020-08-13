@@ -1,7 +1,5 @@
 import React from "react";
-import Post from '../Post';
 import * as S from './style.js';
-import dummy from '../../../dummy/themes.json';
 
 import { useSelector, useActions } from 'react-redux';
 const OffsetCardList = () => {

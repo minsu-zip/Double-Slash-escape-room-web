@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 
 // components
 import ThemeHeader from "../../components/Common/ThemeHeader";
-import SwipeCardList from "../../components/Common/SwipeCardList";
+import ThemeCardList from "../../components/Common/ThemeCardList";
 import OffsetCardList from "../../components/Common/OffsetCardList";
 
 // test
@@ -22,7 +22,7 @@ const Theme = () => {
   return (
     <>
       <ThemeHeader />
-      <SwipeCardList />
+      <ThemeCardList />
 
       <OffsetCardList />
 
