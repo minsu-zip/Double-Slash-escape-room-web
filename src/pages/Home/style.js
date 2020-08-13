@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
 //전체 감쌈
-export const Container = styled.header`
+export const Container = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
+  
 `;
 
 // 이미지 크기
 export const ImgSize = styled.div`
-    width: 100%;
+    // width: 100%;
     // height: 100vh;
    
     img{
@@ -59,4 +60,12 @@ export const Button = styled.button`
         color: #fff;
         transform: translateY(-7px);
     }
+`
+
+export const Div = styled.div `
+    padding-top:20px;
+    margin-top:20px;
+
+    padding-bottom:20px;
+    margin-bottom:20px;
 `

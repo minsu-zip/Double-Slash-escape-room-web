@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as S from './style.js';
-import {Route, Link} from 'react-router-dom';
-
+import {Link} from 'react-router-dom';
+import { useDispatch } from "react-redux";
 
 import img from './16.jpg';
 import SwipeCardList from "../../components/Common/SwipeCardList";
-import Cafe from '../../pages/Cafe/index.jsx'
-import Theme from '../../pages/Theme/index.jsx'
 
+
+
+// action
+import { loadThemes } from "../../store/actions/themesAction";
 const Home = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(loadThemes());
+  }, [dispatch]);
+
   return (
     <>
       <S.Container>
@@ -24,7 +32,7 @@ const Home = () => {
       </S.Container>
 
       
-      <SwipeCardList></SwipeCardList>
+      <S.Div><SwipeCardList></SwipeCardList></S.Div>
       
       
     </>

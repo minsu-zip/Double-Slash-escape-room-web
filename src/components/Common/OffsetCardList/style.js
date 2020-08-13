@@ -6,23 +6,26 @@ export const Container = styled.div`
     overflow: hidden;
     padding: 20px;
     margin: 10px;
-    padding-left: 70px;
+    paading-top:50px;
+    margin-top:50px;
+
     
 `;
 
 export const Img = styled.div`
     position: relative;
-    height : 200px;
-    width : 300px;
+    // height : 200px;
+    // width : 400px;
    img{
-    height: 200px;
-    width: 300px;
+    height: 300px;
+    width: 300px; 
+    border-radius: 10%;
    }
 `
-export const text = styled.div`
+export const Button = styled.div`
         position: absolute;
         top:10%;
-        left:85%;
+        left:75%;
         text-align: center;
 
         button{
@@ -59,12 +62,13 @@ export const Column = styled.div`
     float: left;
     width: 25%;
     padding-top: 10px;
+    padding-left: 30px;
+    
    
 `;
 
 export const Item = styled.div`
     border: grey solid 1px;
-    text-align: center;
     border-style: none;
     
 `;
@@ -97,3 +101,19 @@ button:hover {
 }
     
 `;
+
+export const text = styled.div`
+        font-size: 12px;
+        position: absolute;
+        bottom:5%;
+        font-weight: bold;
+        left:5%;
+        color: white;
+        margin: 10px;
+        div{
+            padding:5px;
+        }
+        div:nth-child(2){
+            font-weight: lighter;
+        }
+`
