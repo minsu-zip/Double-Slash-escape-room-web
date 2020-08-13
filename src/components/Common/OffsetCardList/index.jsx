@@ -8,8 +8,6 @@ const OffsetCardList = () => {
     const [showResults, setShowResults] = React.useState(false);
     const onClick = () => setShowResults(true);
 
-
-
     const theOthersTheme = useSelector((state) => state.themes.theOthersTheme);
     console.log(theOthersTheme)
 
@@ -36,7 +34,6 @@ const OffsetCardList = () => {
             </S.Row>
         </div>
     )
-
 
     return (
         <>

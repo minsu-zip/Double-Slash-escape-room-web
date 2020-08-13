@@ -10,29 +10,37 @@ export const Container = styled.div`
 
 // 이미지 크기
 export const ImgSize = styled.div`
-    // width: 100%;
-    // height: 100vh;
+    width: 100%;
+    height: 100%;
    
     img{
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 90%;
     }
 `;
 
 export const TitleWrapper = styled.div`
     position: absolute;
-    top: 40%;
-    left: 50%;
+    top: 35%;
+    left: 55%;
+
     
 `
 export const Text = styled.div`
     h1{
         font-size: 30px;
+        font-weight: bolder;
     }
     margin: 10px;
     padding: 10px;
-    font-family:'Arial Black', sans-serif;
+    // font-family:'Arial Black', sans-serif;
+    font-family: sans-serif;
+   
     color:white;
+    div{
+        font-weight: lighter;
+        opacity:0.5;
+    }
 `
 export const Button = styled.button`
     

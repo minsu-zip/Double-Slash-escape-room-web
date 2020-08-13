@@ -1,15 +1,9 @@
 import React, { useState } from "react";
-import Post from '../Post';
 import * as S from './style.js';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Controller, Thumbs, } from 'swiper';
 import 'swiper/swiper-bundle.css';
-import dummy from '../../../dummy/themes.json';
-
-
-// import themes from '../../../store/reducers/themesReducer/index'
 import { useSelector, useActions  } from 'react-redux';
-
 
 SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
 
@@ -27,34 +21,14 @@ const SwipeCardList = () => {
     )
   })
 
-  
-// const img_data = datadummy.map((dummy, index) => {
-  //   return (
-  //     <img key={index} src={dummy.thumbnail}></img>
-  //   )
 
-
-
-  //  const a = [{id:"A",pw:"B"},{id:"C",pw:"D"},{id:"E",pw:"F"}]
-  //  console.log(a[0].id)
-   
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [ControlledSwiper, setControlledSwiper] = useState(null);
-
-  // const datadummy = dummy;
-  // const slide = datadummy.map((props, index) => {
-  //   return (
-  //     <SwiperSlide key={index} tag="li">
-  //       <S.Img>{Post`style={listStyle: 'none'}`} <S.text><div>금주의 테마</div></S.text></S.Img>
-  //     </SwiperSlide>
-  //   )
-  // })
-
 
   return (
     <>
       <S.Container>
-        
+    
         
         <S.title>BEST POPULAR</S.title>
         {/* 멀티슬라이드 적용부분 */}
