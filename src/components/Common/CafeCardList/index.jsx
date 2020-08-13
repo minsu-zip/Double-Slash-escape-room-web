@@ -9,11 +9,15 @@ SwiperCore.use([Navigation, Pagination, Controller, Thumbs]);
 
 const SwipeCardList = () => {
 
-   const top10Themes = useSelector((state) => state.themes.top10Themes);
-   const imgsilde = top10Themes.map((top,index)=>{
+   const allCafes = useSelector((state) => state.cafes.allCafes);
+    console.log(allCafes);
+   const imgsilde = allCafes.map((all,index)=>{
     return(
       <SwiperSlide key={index} tag="li">
-          <S.Img><img key={index} src={"http://220.149.235.230/"+top.image} ></img><S.text><div>{top.themeName}</div><div>{top.cafeName+":   "+top.area}</div> </S.text></S.Img>
+          <S.Img>
+          <a href ={all.url}><img key={index} src={"http://220.149.235.230/"+all.logo}></img></a>
+            <S.text><div>{all.cafeName+"   "+all.area+"점"}</div></S.text>
+          </S.Img>
       </SwiperSlide>
      
     )
@@ -28,7 +32,7 @@ const SwipeCardList = () => {
       <S.Container>
     
         
-        <S.title>BEST POPULAR</S.title>
+        <S.title>NEW STORE</S.title>
         {/* 멀티슬라이드 적용부분 */}
         <Swiper id="main" tag="section" wrapperTag="ul"
           navigation pagination={{ clickable: true }}

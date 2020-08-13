@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 
 // components
 import CafeTab from "../../components/CafeTab";
-import ThemeCardList from "../../components/Common/ThemeCardList";
+import CafeCardList from "../../components/Common/CafeCardList";
 
 // action
 import { loadCafes } from "../../store/actions/cafesAction";
@@ -17,8 +17,8 @@ const Cafe = () => {
 
   return (
     <>
-      <CafeTab />
-      <ThemeCardList />
+      {/* <CafeTab /> */}
+      <CafeCardList />
     </>
   );
 };
