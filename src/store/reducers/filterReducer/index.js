@@ -16,7 +16,17 @@ import * as submitFiltering from "./submitFiltering";
 
 const initialState = {
   printFilterPopup: false,
-  clickedList: [],
+  clickedList: {
+    activity: "",
+    area: "",
+    barrier: "",
+    genreId: 0,
+    level: 0,
+    peopleNum: 0,
+    sorting: "",
+    themeName: "",
+    time: 0,
+  },
   filteringSuccess: false,
   filteringResult: "",
   posts: [],
